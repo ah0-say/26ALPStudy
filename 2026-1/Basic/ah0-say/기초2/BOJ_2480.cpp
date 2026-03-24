@@ -6,33 +6,39 @@ int main()
     int a,b,c;
     int cash;
     cin >> a >> b >> c ;
-    if (a==b&&a==c)
+    
+    if (a==b && a==c)
     {
-        cash = 10000+ a * 1000;
+        cash = 10000 + a * 1000;
     }
-    else if ((a==b&&a!=c)||(a==c&&a!=b))
+    else if (a==b)
     {
-        cash= 1000+a*100;
+        cash = 1000 + a * 100;
     }
-    else if (c==b&&a!=b)
+    else if (a==c)
     {
-        cash = 1000+b*100;
+        cash = 1000 + a * 100;
     }
-    else if (a!=b!=c)
+    else if (b==c)
     {
-        if (a>b &&a>c)
+        cash = 1000 + b * 100;
+    }
+    else
+    {
+        if (a>b && a>c)
         {
-            cash=a*100;
+            cash = a * 100;
         }
         else if (b>a && b>c)
         {
-            cash=b*100;
+            cash = b * 100;
         }
-        else if (c>b && c>a)
+        else
         {
-            cash=c*100;
+            cash = c * 100;
         }
     }
-    cout<<cash;
+    
+    cout << cash;
     return 0;
 }
